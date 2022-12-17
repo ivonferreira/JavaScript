@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro script JS</title>
+
+    <style>
+        body {
+            background-color:blueviolet;
+            color:orangered;
+            font: normal 20px Arial;
+        }
+        h1 {
+            color:brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+        var n1 = window.prompt('Digite um número:')//Sempre o window.prompt retorna sempre uma string
+        var n1 = Number.parseInt(n1) //Comando para converter variavel string em number Int(se for floot sera parseFloat)
+        var n2 = Number.parseInt(window.prompt('Digite outro número:'))//Comando para converter variavel digitada já em number
+        var n3 = Number(window.prompt('Digite mais um número:'))//Forma atual mais simples onde ele já detecta se é int ou float. mas usamos as outras para forçar int ou float
+        var s = n1 + n2 + n3
+        window.alert(`A soma dos valores ${n1} + ${n2} + ${n3} é igual a ${s} `)//Template strings para interpolar de modo melhor entre parenteses precisa ficar entre crases (``) e as variaveis fica dessa forma ${nomedavariavel}
+        /*Para converter numero em string usamos o codigo
+        String(n) - Para converter uma variável
+        n.toString() - Para converter direto*/
+        var nome = window.prompt('Digite seu nome:')
+        var tam = nome.length//Tamanho da string
+        window.alert(`Seu nome é ${nome.toUpperCase()} e tem ${tam} letras`)//.toUpperCase Converter string em Maiuscula e .toLowerCase Minuscula
+    </script>
+</body>
+</html>

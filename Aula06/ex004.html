@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual o seu nome?')
+        document.write(`Olá, <strong>${nome}</strong> seu nome tem ${nome.length} letras <br>`) //writeln após o fim pula uma linha, mas não funcionou aqui
+        document.write(`Seu nome em Maiúsculas é <strong>${nome.toUpperCase()}</strong><br>`) //Podemos incluir elementos html dentro da parte que será escrita no html
+        document.write(`Seu nome em Minúsculas é <strong>${nome.toLowerCase()}</strong>`)
+        /*Para numeros n.toFixed(2) - deixa o numero com a quantidade de digitos dentro do parenteses
+        n.toFixed(2).replace('.',',') - sunstitui o ponto pela virgulae deis digitos
+        n.toLocaleString('pt-BR',{style:'currency', currency:'BRL'}) converte o numero em valores monetarios em real brasileiro inclusive a virgula
+        n.toLocaleString('pt-BR',{style:'currency', currency:'USD'}) converte o numero em valores monetarios em dolar americano com virgula
+        n.toLocaleString('eng',{style:'currency', currency:'USD'}) converte o numero em valores monetarios em dolar americano com ponto
+        n.toLocaleString('pt-BR',{style:'currency', currency:'EUR'}) converte o numero em valores monetarios em euro com virgula*/
+
+    </script>
+</body>
+</html>
