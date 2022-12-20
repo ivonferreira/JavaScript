@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(90, 90, 230);
+            color: white;
+            font-size: 20px;
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <p>window &gt; location/document/history  &gt; html(document) &gt; head/body &gt;meta/title(head) e h1/p/div  &gt; strong(p)</p>
+    <h2>Selecionando</h2>
+    <p>Podemos selecionar os elementos de uma DOM por:
+        <ul>
+            <li>Marca: getElementsByTagName()[]. Entre parenteses colocamos a tag que queremos pegar e entre colchetes o numero da ordem dele de 0 até o ultimo.</li>
+            <li>ID: getElementById(). Entre parenteses identificamos o id do HTML, como o nome é Element no plural só pegamos um elemento por isso não precisa de colchetes.
+            </li>
+            <li>Nome: getElementsByNames()[]Entre parenteses usamos o nome do objeto e no colchetes o numero de ordem.</li>
+            <li>Classe: getElementsByClassName()[] Entre parenteses o nome da classe e Colchetes o numero de ordem </li>
+            <li>Seletor: querySelector()entre parenteses colocamos o codigo css Ex. documente.querySelector('div#msg'). Esse metodo é o mais atual e recomendado.</li>
+        </ul>
+    </p>
+    <p>Comandos novos em JavaScript:
+        <ul>
+            <li id="teste">Alert - Cria alerta na tela</li>
+            <li>Confirm - Cria alerta e espera uma resposta negativa ou positiva</li>
+            <li>Prompt - Cria um alerta que aguarda uma entrada do usuario em forma de string. </li>
+            <li>var - cria variavel. Ex var nome = 5.</li>
+            <li>style.color - Muda a cor da letra. Ex. n.style.color = 'red' </li>
+            <li>style.background - Muda cor do fundo. Ex. n.style.background = 'red'</li>
+            <li>document.write - Escreve no documento html. Podemos escrever innerText(texto puro), innerHTML(texto com formatação HTML) e innerURL(URLs)</li>
+        </ul>
+    </p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        p1.style.color = 'darkred'
+        corpo.style.background = 'violetblue'
+        window.document.write(p1.innerHTML)
+        /*var d = document.getElementById('msg')
+        d.style.color='green'
+        d.innerText = 'Estou Aguardando...'*/
+        document.getElementById('msg').style.color = 'Gray'
+        document.getElementById('msg').innerText = 'Estou esperando...'
+        document.querySelector('li#teste').style.color = 'black'
+    </script>
+</body>
+</html>
