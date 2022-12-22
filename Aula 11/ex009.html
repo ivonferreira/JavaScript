@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação De Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Qual o pais você nasceu: <input type="text" value="Brasil" name="pais" id="pais">
+    <input type="button" value="verificar" onclick="checar()">
+    <div id="nasc">
+    </div>
+    <script>
+        function checar() {
+            var pais = document.getElementById("pais")
+            var nasc = document.querySelector('div#nasc')
+            nasc.innerHTML = `<p>Você nasceu no <strong>${pais}</strong> então:`
+            if(pais=='Brasil'){
+                nasc.innerHTML += '<p>você é <strong>brasileiro</strong>.</p>'
+            }else{
+                nasc.innerHTML += '<p>você é <strong>estrangeiro</strong>.</p>'
+            }
+        }
+    </script>
+</body>
+</html>
