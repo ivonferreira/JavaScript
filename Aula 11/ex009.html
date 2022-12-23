@@ -16,8 +16,8 @@
         function checar() {
             var pais = document.getElementById("pais")
             var nasc = document.querySelector('div#nasc')
-            nasc.innerHTML = `<p>Você nasceu no <strong>${pais}</strong> então:`
-            if(pais=='Brasil'){
+            nasc.innerHTML = `<p>Você nasceu no <strong>${pais.value}</strong> então:`
+            if(pais.value=='Brasil'){
                 nasc.innerHTML += '<p>você é <strong>brasileiro</strong>.</p>'
             }else{
                 nasc.innerHTML += '<p>você é <strong>estrangeiro</strong>.</p>'
